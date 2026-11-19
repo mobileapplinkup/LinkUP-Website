@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection.jsx';
 import AppPreviewSection from './components/AppPreviewSection.jsx';
 import SocialLinksSection from './components/SocialLinksSection.jsx';
 import PricingSection from './components/PricingSection.jsx';
+import FaqSection from './components/FaqSection.jsx';
 import SafetySection from './components/SafetySection.jsx';
 import Footer from './components/Footer.jsx';
 import Modal from './components/Modal.jsx';
@@ -55,6 +56,7 @@ export default function App() {
         <AppPreviewSection />
         <SocialLinksSection />
         <PricingSection onDownload={openDownload} />
+        <FaqSection />
         <SafetySection onOpenDoc={openDoc} />
       </main>
       <Footer onOpenDoc={openDoc} />

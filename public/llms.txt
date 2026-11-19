@@ -1,0 +1,48 @@
+# LinkUp
+
+> LinkUp ("Talk. Stream. Meet. Belong.") is a global mobile social app for iOS and Android combining live voice rooms, interactive gift rooms, solo and group live video streaming, international and local 18+ dating, language learning & exchange in 19 languages with real-time AI translation and live captions, Moments & vertical Shorts, LINK relationships, and Host Fanclubs.
+
+- Website: https://linkupmobile.xyz
+- Support: support@linkupmobile.xyz
+- Platforms: iOS (Apple App Store), Android (Google Play & Direct Android APK)
+- Android Package: com.linkup.linkup
+- Pricing: Free to download and use; optional VIP ($9.99/mo) and VIP-X ($20/mo, $200/yr, or $500 lifetime)
+
+## Core Features
+
+### 1. Live Voice Rooms & Gift Rooms
+- Host or join real-time audio voice rooms with 2 host/co-host seats and 8 guest speaker seats (10 stage seats total).
+- Topics include Language Exchange, Music, Gaming, Education, Culture, Casual Chat, Reading Plan, Debate, Storytelling, and Trivia.
+- Interactive gifting with virtual gifts, Goodie Bags, Gift Passes, Treasure Chests, room boosts, animated entrance effects, and room levels.
+- Built-in AI live captions translate spoken conversation in real time inside rooms.
+- Creators and hosts earn Diamonds on gifts received, with payouts via Stripe Connect (for verified 18+ VIP creators).
+
+### 2. Live Video Streaming (Solo & Group Live)
+- Go live with full-screen solo video streams or group live streams with guest video tiles.
+- Real-time chat, live gifting, viewer lists, and Host Fanclubs.
+
+### 3. International & Local Dating (Connect & Matchmaking)
+- Meet language partners, friends, and romantic matches locally (Nearby / City) or internationally across cultures.
+- 18+ age-verified dating section powered by Veriff identity verification.
+- Rich profiles featuring native and learning languages (1–5 fluency scale), MBTI, zodiac sign, blood type, occupation, hobbies, places visited, and relationship goals (Friendship, Casual, Long-term, Marriage).
+- Location and gender filters, Profile Boosts, and VIP-X advanced matchmaking.
+
+### 4. Language Learning & Exchange (19 Languages + AI Translation)
+- Supports 19 profile languages: English, Japanese, Spanish, French, German, Korean, Chinese (Simplified), Chinese (Traditional), Portuguese, Arabic, Russian, Italian, Hindi, Thai, Vietnamese, Turkish, Indonesian, Dutch, and Swedish.
+- Real-time AI chat translation inside Direct Messages, Moment/Short post translation, voice message transcription, and AI live captions in Voice Rooms.
+
+### 5. Moments, Shorts & Messaging
+- Share photos, text posts, and full-screen vertical Shorts videos across For You and Following feeds.
+- Direct Messages and group chats with AI translation, voice messages, room invites, self-destructing messages (VIP), and Block Unknown Chat protection.
+
+### 6. LINK Relationships & Host Fanclubs
+- Official LINK slots: Couple (1 slot), Bestie (5 slots), and Family (2 slots).
+- Unlimited daily LINK EXP earned together in Voice/Live rooms (1 base EXP per 2 minutes) and by gifting (1 base EXP per 10 tokens), leveling from Level 0 to Level 6 (0 to 200,000 XP) with Avatar Effects, Chat Bubbles, Entry Effects, Special Gifts, and up to 1.75x EXP boosts.
+- Host Fanclubs with monthly/yearly membership, fan XP tasks, fan comment bubbles, exclusive gift rewards, and exclusive fan badges.
+
+## Safety & Legal
+- 18+ community with Veriff age verification, One Device One Account policy, Firebase App Check integrity, and evidence-based moderation.
+- Privacy Policy: https://linkupmobile.xyz/#legal/privacy
+- Terms of Service: https://linkupmobile.xyz/#legal/terms
+- Community & Safety: https://linkupmobile.xyz/#legal/safety
+- Support & Account Deletion: https://linkupmobile.xyz/#legal/support
