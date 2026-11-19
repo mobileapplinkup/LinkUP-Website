@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Lock, Users } from 'lucide-react';
-import { FANCLUB, LINK_LEVELS, LINK_TYPES } from '../data/linkupData.js';
+import { FANCLUB, LINK_EXP_RULES, LINK_LEVELS, LINK_TYPES } from '../data/linkupData.js';
 import { SectionHeader, fmt } from './ui.jsx';
 
 function LinkExplorer() {
@@ -64,26 +64,37 @@ function LinkExplorer() {
         </div>
 
         <div className="relative p-6 sm:p-8" style={{ background: `linear-gradient(160deg, ${type.color}26, transparent 70%)` }}>
-          <p className="text-sm font-semibold">LINK level</p>
-          <p className="text-xs text-linkup-muted">Earn up to 25 LINK XP a day. Tap a level to see what it unlocks.</p>
-          <ol className="mt-5 space-y-2.5">
+          <p className="text-sm font-semibold">LINK levels (0–6) &amp; EXP rules</p>
+          <p className="text-xs text-linkup-muted">No daily XP cap. Earn base EXP together in rooms or by gifting, multiplied up to 1.75× as your LINK levels up.</p>
+          <div className="mt-3 grid grid-cols-2 gap-2">
+            {LINK_EXP_RULES.map((r) => (
+              <div key={r.label} className="rounded-xl bg-black/25 px-3 py-2">
+                <p className="text-[11px] font-semibold text-white">{r.label}</p>
+                <p className="text-[10px] text-linkup-muted">{r.detail}</p>
+              </div>
+            ))}
+          </div>
+          <ol className="mt-4 space-y-2">
             {LINK_LEVELS.map((l) => {
               const unlocked = l.level <= level;
+              const title = l.typePrefixed ? `${type.label} ${l.reward}` : l.reward;
               return (
                 <li key={l.level}>
                   <button
                     onClick={() => setLevel(l.level)}
-                    className={`flex w-full items-center gap-3 rounded-xl p-3 text-left transition ${unlocked ? 'bg-white/[0.06]' : 'bg-transparent opacity-50 hover:opacity-80'}`}
+                    className={`flex w-full items-center gap-3 rounded-xl p-2.5 text-left transition ${unlocked ? 'bg-white/[0.06]' : 'bg-transparent opacity-50 hover:opacity-80'}`}
                   >
                     <span
-                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-display text-sm font-bold"
+                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-display text-xs font-bold"
                       style={{ background: unlocked ? type.color : 'rgba(255,255,255,0.08)' }}
                     >
                       {l.level}
                     </span>
                     <span className="flex-1">
-                      <span className="block text-sm font-semibold">{type.label} {l.reward}</span>
-                      <span className="block text-xs text-linkup-muted">{fmt(l.xp)} XP</span>
+                      <span className="block text-sm font-semibold">{title}</span>
+                      <span className="block text-[11px] text-linkup-muted">
+                        {fmt(l.xp)} XP · {l.detail}
+                      </span>
                     </span>
                     {!unlocked && <Lock size={14} className="text-linkup-muted" />}
                   </button>

@@ -232,12 +232,20 @@ export const LINK_TYPES = [
 ];
 
 export const LINK_LEVELS = [
-  { level: 1, xp: 0, reward: 'LINK created' },
-  { level: 2, xp: 800, reward: 'Chat Bubble' },
-  { level: 3, xp: 3200, reward: 'Avatar Aura' },
-  { level: 4, xp: 9000, reward: 'Enhanced Chat Bubble' },
-  { level: 5, xp: 22500, reward: 'Radiant Avatar Aura' },
-  { level: 6, xp: 45000, reward: 'Ultimate Effect' },
+  { level: 0, xp: 0, reward: 'Avatar Effect', typePrefixed: true, detail: 'Unlocked when your LINK is created' },
+  { level: 1, xp: 300, reward: 'LINK EXP Boost +0.25×', typePrefixed: false, detail: '1.25× LINK EXP for this connection' },
+  { level: 2, xp: 1200, reward: 'Chat Bubble', typePrefixed: true, detail: 'Matching chat bubble unlocked' },
+  { level: 3, xp: 3600, reward: 'LINK EXP Boost +0.25×', typePrefixed: false, detail: '1.50× LINK EXP for this connection' },
+  { level: 4, xp: 9000, reward: 'Entry Effect', typePrefixed: true, detail: 'Custom room entrance effect unlocked' },
+  { level: 5, xp: 22500, reward: 'LINK EXP Boost +0.25×', typePrefixed: false, detail: '1.75× LINK EXP for this connection' },
+  { level: 6, xp: 200000, reward: 'Special Gift', typePrefixed: true, detail: 'Unlock Special Gift in Gift Shop' },
+];
+
+export const LINK_EXP_RULES = [
+  { label: 'No daily XP cap', detail: 'Earn unlimited LINK EXP every day' },
+  { label: 'Rooms together', detail: '1 base EXP per 2 min in Voice or Live rooms' },
+  { label: 'Gifting partners', detail: '1 base EXP per 10 tokens gifted' },
+  { label: 'Connection boosts', detail: '+0.25× at Lv. 1, 3 & 5 (up to 1.75×)' },
 ];
 
 // lib/models/fanclub.dart
