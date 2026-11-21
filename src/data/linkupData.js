@@ -130,6 +130,16 @@ export const TOKEN_PACKAGES = [
   { usd: 100, tokens: 6000 },
 ];
 
+// functions/src/catalog/products.js → WEB_TOKEN_PACKAGES (+10% web bonus via Stripe Checkout)
+export const WEB_TOKEN_PACKAGES = [
+  { id: 'linkup_web_tokens_55', usd: 1, tokens: 55, inAppTokens: 50 },
+  { id: 'linkup_web_tokens_275', usd: 5, tokens: 275, inAppTokens: 250 },
+  { id: 'linkup_web_tokens_556', usd: 10, tokens: 556, inAppTokens: 505 },
+  { id: 'linkup_web_tokens_1430', usd: 25, tokens: 1430, inAppTokens: 1300 },
+  { id: 'linkup_web_tokens_3025', usd: 50, tokens: 3025, inAppTokens: 2750 },
+  { id: 'linkup_web_tokens_6600', usd: 100, tokens: 6600, inAppTokens: 6000 },
+];
+
 // lib/models/gift_subscription.dart → GiftPassData._planMeta
 export const GIFT_PASSES = [
   { name: '7-Day Gift Pass', tier: 'Basic', days: 7, usd: 1, value: '150%+ Value' },

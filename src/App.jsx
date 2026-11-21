@@ -1,14 +1,17 @@
 import { useCallback, useEffect, useState } from 'react';
+import { AuthProvider } from './context/AuthContext.jsx';
 import Navbar from './components/Navbar.jsx';
 import HeroSection from './components/HeroSection.jsx';
 import AppPreviewSection from './components/AppPreviewSection.jsx';
 import SocialLinksSection from './components/SocialLinksSection.jsx';
+import TokenStoreSection from './components/TokenStoreSection.jsx';
 import PricingSection from './components/PricingSection.jsx';
 import FaqSection from './components/FaqSection.jsx';
 import SafetySection from './components/SafetySection.jsx';
 import Footer from './components/Footer.jsx';
 import Modal from './components/Modal.jsx';
 import LegalDoc from './components/LegalDoc.jsx';
+import AuthModalContent from './components/AuthModal.jsx';
 import { DownloadContent } from './components/Download.jsx';
 import { LEGAL_DOCS } from './data/legalContent.js';
 
@@ -24,6 +27,7 @@ const docFromHash = () => {
 
 export default function App() {
   const [downloadOpen, setDownloadOpen] = useState(false);
+  const [authOpen, setAuthOpen] = useState(false);
   const [doc, setDoc] = useState(docFromHash);
 
   useEffect(() => {
@@ -47,14 +51,17 @@ export default function App() {
 
   const openDownload = useCallback(() => setDownloadOpen(true), []);
   const closeDownload = useCallback(() => setDownloadOpen(false), []);
+  const openAuth = useCallback(() => setAuthOpen(true), []);
+  const closeAuth = useCallback(() => setAuthOpen(false), []);
 
   return (
-    <>
-      <Navbar onDownload={openDownload} />
+    <AuthProvider>
+      <Navbar onDownload={openDownload} onOpenAuth={openAuth} />
       <main>
         <HeroSection onDownload={openDownload} />
         <AppPreviewSection />
         <SocialLinksSection />
+        <TokenStoreSection onOpenAuth={openAuth} />
         <PricingSection onDownload={openDownload} />
         <FaqSection />
         <SafetySection onOpenDoc={openDoc} />
@@ -64,9 +71,12 @@ export default function App() {
       <Modal open={downloadOpen} onClose={closeDownload} title="Get LinkUp">
         <DownloadContent />
       </Modal>
+      <Modal open={authOpen} onClose={closeAuth} title="Sign in to LinkUp">
+        <AuthModalContent onSuccess={closeAuth} />
+      </Modal>
       <Modal open={Boolean(doc)} onClose={closeDoc} wide>
         {doc && <LegalDoc id={doc} onSwitch={openDoc} />}
       </Modal>
-    </>
+    </AuthProvider>
   );
 }
