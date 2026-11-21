@@ -114,16 +114,16 @@ function FanclubShowcase() {
       <div>
         <h3 className="flex items-center gap-2 text-2xl font-bold"><Users className="text-linkup-pink" /> Host fanclubs</h3>
         <p className="mt-2 text-sm text-linkup-muted">
-          Hosts name their fanclub and pick a badge. Fans join to support them and get perks in every room that host runs.
+          Unlocks at Room Level {FANCLUB.minRoomLevel}. Hosts set a custom Fan Tag, and fans join to support them and earn perks in every room that host runs.
         </p>
         <div className="mt-6 grid grid-cols-2 gap-3">
           <div className="rounded-2xl bg-linkup-surface-light p-4">
-            <p className="text-xs text-linkup-muted">Monthly</p>
+            <p className="text-xs text-linkup-muted">Monthly · 30 days</p>
             <p className="font-display text-2xl font-bold">🪙 {FANCLUB.monthly}</p>
           </div>
           <div className="relative rounded-2xl bg-gradient-to-br from-[#FF8FAB]/30 to-linkup-magenta/30 p-4">
             <span className="absolute right-2 top-2 rounded-full bg-linkup-magenta px-2 py-0.5 text-[10px] font-bold">Save 17%</span>
-            <p className="text-xs text-linkup-muted">Yearly</p>
+            <p className="text-xs text-linkup-muted">Yearly · 1 year</p>
             <p className="font-display text-2xl font-bold">🪙 {FANCLUB.yearly}</p>
           </div>
         </div>
@@ -132,7 +132,7 @@ function FanclubShowcase() {
           {FANCLUB.tasks.map((t) => (
             <li key={t.name} className="flex items-center justify-between rounded-lg bg-linkup-surface-light px-3 py-2 text-sm">
               <span>{t.emoji} {t.name}</span>
-              <span className="font-semibold text-linkup-pink">+{t.xp} XP</span>
+              <span className="font-semibold text-linkup-pink">{t.xp}</span>
             </li>
           ))}
         </ul>
@@ -144,6 +144,16 @@ function FanclubShowcase() {
             <div key={p.name} className="flex flex-col items-center justify-center rounded-2xl bg-linkup-surface-light p-5 text-center transition hover:bg-white/10">
               <span className="text-4xl">{p.emoji}</span>
               <span className="mt-2 text-sm font-semibold">{p.name}</span>
+            </div>
+          ))}
+        </div>
+        <p className="mb-2 mt-6 text-sm font-semibold">Fan levels (1–5)</p>
+        <p className="mb-3 text-xs text-linkup-muted">Level up your Fan Tag badge with a host by completing room tasks and sending exclusive gifts.</p>
+        <div className="grid grid-cols-5 gap-2">
+          {FANCLUB.levels.map((l) => (
+            <div key={l.level} className="rounded-xl bg-linkup-surface-light p-2.5 text-center">
+              <p className="font-display text-sm font-bold text-linkup-pink">Lv. {l.level}</p>
+              <p className="mt-0.5 text-[11px] text-linkup-muted">{fmt(l.xp)} XP</p>
             </div>
           ))}
         </div>

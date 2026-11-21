@@ -233,17 +233,17 @@ export const LINK_TYPES = [
 
 export const LINK_LEVELS = [
   { level: 0, xp: 0, reward: 'Avatar Effect', typePrefixed: true, detail: 'Unlocked when your LINK is created' },
-  { level: 1, xp: 300, reward: 'LINK EXP Boost +0.25×', typePrefixed: false, detail: '1.25× LINK EXP for this connection' },
-  { level: 2, xp: 1200, reward: 'Chat Bubble', typePrefixed: true, detail: 'Matching chat bubble unlocked' },
-  { level: 3, xp: 3600, reward: 'LINK EXP Boost +0.25×', typePrefixed: false, detail: '1.50× LINK EXP for this connection' },
-  { level: 4, xp: 9000, reward: 'Entry Effect', typePrefixed: true, detail: 'Custom room entrance effect unlocked' },
-  { level: 5, xp: 22500, reward: 'LINK EXP Boost +0.25×', typePrefixed: false, detail: '1.75× LINK EXP for this connection' },
+  { level: 1, xp: 2000, reward: 'LINK EXP Boost +0.25×', typePrefixed: false, detail: '1.25× LINK EXP for this connection' },
+  { level: 2, xp: 8000, reward: 'Chat Bubble', typePrefixed: true, detail: 'Matching chat bubble unlocked' },
+  { level: 3, xp: 22000, reward: 'LINK EXP Boost +0.25×', typePrefixed: false, detail: '1.50× LINK EXP for this connection' },
+  { level: 4, xp: 50000, reward: 'Entry Effect', typePrefixed: true, detail: 'Custom room entrance effect unlocked' },
+  { level: 5, xp: 105000, reward: 'LINK EXP Boost +0.25×', typePrefixed: false, detail: '1.75× LINK EXP for this connection' },
   { level: 6, xp: 200000, reward: 'Special Gift', typePrefixed: true, detail: 'Unlock Special Gift in Gift Shop' },
 ];
 
 export const LINK_EXP_RULES = [
   { label: 'No daily XP cap', detail: 'Earn unlimited LINK EXP every day' },
-  { label: 'Rooms together', detail: '1 base EXP per 2 min in Voice or Live rooms' },
+  { label: 'Rooms together', detail: '1 base EXP per 10 min in Voice or Live rooms' },
   { label: 'Gifting partners', detail: '1 base EXP per 10 tokens gifted' },
   { label: 'Connection boosts', detail: '+0.25× at Lv. 1, 3 & 5 (up to 1.75×)' },
 ];
@@ -252,16 +252,25 @@ export const LINK_EXP_RULES = [
 export const FANCLUB = {
   monthly: 50,
   yearly: 500,
+  minRoomLevel: 5,
+  levels: [
+    { level: 1, xp: 0 },
+    { level: 2, xp: 3000 },
+    { level: 3, xp: 9000 },
+    { level: 4, xp: 18000 },
+    { level: 5, xp: 30000 },
+  ],
   perks: [
     { emoji: '💌', name: 'Fan comment bubble' },
     { emoji: '👼', name: 'Exclusive gift rewards' },
     { emoji: '🏅', name: 'Exclusive fan badge' },
   ],
   tasks: [
-    { emoji: '🎬', name: 'Watch 5 minutes of Live', xp: 5 },
-    { emoji: '💬', name: 'Share the Live as a Moments post', xp: 5 },
-    { emoji: '👥', name: 'Get on stage', xp: 15 },
-    { emoji: '🎁', name: 'Send an exclusive gift', xp: 5 },
+    { emoji: '🎬', name: 'Stay 30 minutes in Room', xp: '+5 XP' },
+    { emoji: '⏱️', name: 'Stay 1 hour in Room', xp: '+10 XP' },
+    { emoji: '💬', name: 'Share Room as a Moments post', xp: '+5 XP' },
+    { emoji: '👥', name: 'Successfully on stage', xp: '+15 XP' },
+    { emoji: '🎁', name: 'Send an exclusive gift', xp: '+5 XP ∞' },
   ],
 };
 

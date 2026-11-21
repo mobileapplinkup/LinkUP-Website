@@ -212,7 +212,7 @@ export default function HeroSection({ onDownload }) {
           </div>
           <div className="glass absolute -left-2 top-16 hidden rounded-2xl px-4 py-3 sm:block lg:-left-6">
             <p className="text-xs text-linkup-muted">Creator diamond rate</p>
-            <p className="font-display text-xl font-bold text-linkup-diamond">💎 up to 27.5%</p>
+            <p className="font-display text-xl font-bold text-linkup-diamond">💎 up to 60%</p>
           </div>
           <div className="glass absolute -right-2 bottom-24 hidden rounded-2xl px-4 py-3 sm:block lg:-right-4">
             <p className="text-xs text-linkup-muted">Live translation</p>
