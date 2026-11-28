@@ -13,7 +13,7 @@ export default function FaqSection() {
         <SectionHeader
           eyebrow="FAQ"
           title={<>Everything about <span className="brand-text">LinkUp.</span></>}
-          subtitle="Answers about live voice rooms, gift rooms, video streaming, international & local dating, and language exchange."
+          subtitle="Answers about live voice rooms, gift rooms, video streaming, international & local matchmaking, and language exchange."
         />
         <div className="space-y-3">
           {FAQS.map((item, i) => {

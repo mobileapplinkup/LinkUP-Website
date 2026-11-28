@@ -284,10 +284,18 @@ export const FANCLUB = {
   ],
 };
 
-// lib/models/store_products.dart → vipPlans, lib/models/vip_x_plan.dart
+// lib/models/store_products.dart → vipPlans (in-app vs. 10% off web prices)
 export const VIP_PRICES = {
-  vipMonthly: 9.99,
-  vipX: { monthly: 20, yearly: 200, lifetime: 500 },
+  vip: {
+    monthly: { inApp: 9.99, web: 8.99, webProductId: 'linkup_web_vip_monthly' },
+    yearly: { inApp: 100, web: 90, webProductId: 'linkup_web_vip_yearly' },
+    lifetime: { inApp: 250, web: 225, webProductId: 'linkup_web_vip_lifetime' },
+  },
+  vipX: {
+    monthly: { inApp: 20, web: 18, webProductId: 'linkup_web_vipx_monthly' },
+    yearly: { inApp: 200, web: 180, webProductId: 'linkup_web_vipx_yearly' },
+    lifetime: { inApp: 500, web: 450, webProductId: 'linkup_web_vipx_lifetime' },
+  },
 };
 
 // lib/services/vip_feature_service.dart — values: true | false | string
@@ -296,12 +304,12 @@ export const FEATURE_MATRIX = [
   { feature: 'Voice & live room time', free: '2 hrs / day', vip: 'Unlimited', vipx: 'Unlimited' },
   { feature: 'Learning languages', free: '1', vip: '3', vipx: '3' },
   { feature: 'Room exposure', free: '1×', vip: '5×', vipx: '10×' },
-  { feature: 'Diamonds earned on gifts', free: '10%', vip: '15% – 27.5%', vipx: '15% – 27.5%' },
-  { feature: 'AI live captions', free: false, vip: true, vipx: true },
+  { feature: 'Diamonds earned on gifts', free: '10%', vip: 'Up to 60%', vipx: 'Up to 60%' },
   { feature: 'See profile visitors', free: false, vip: true, vipx: true },
   { feature: 'Hide your visits', free: false, vip: true, vipx: true },
   { feature: 'Filter by gender & location', free: false, vip: true, vipx: true },
   { feature: 'Double points days (1st & 15th)', free: false, vip: true, vipx: true },
+  { feature: 'Custom chat backgrounds', free: false, vip: true, vipx: true },
   { feature: 'Premium gifts', free: false, vip: true, vipx: true },
   { feature: 'Send a gift with a message', free: false, vip: true, vipx: true },
   { feature: 'Pay-to-unlock posts', free: false, vip: true, vipx: true },
@@ -309,17 +317,19 @@ export const FEATURE_MATRIX = [
   { feature: 'Block Unknown Chat', free: false, vip: true, vipx: true },
   { feature: 'Creator payouts', free: false, vip: true, vipx: true },
   { feature: 'Ad-free', free: false, vip: true, vipx: true },
+  { feature: 'AI live captions', free: false, vip: false, vipx: true },
+  { feature: 'Save live stream media', free: false, vip: false, vipx: true },
   { feature: 'Matchmaking', free: false, vip: false, vipx: true },
   { feature: 'Message memory & chat sync', free: false, vip: false, vipx: true },
 ];
 
-// lib/screens/connect/widgets/vip_x_upgrade_sheet.dart
+// lib/screens/connect/widgets/vip_x_upgrade_sheet.dart + vip_feature_service.dart
 export const VIPX_EXTRAS = [
+  'AI live captions in Voice & Live rooms',
+  'Save live stream media',
   'Unlimited likes & connections',
-  'View all photos',
-  'Extended profiles',
-  'Advanced matching',
-  'Age verification badge',
-  'Message history saved',
+  'View all photos & extended profiles',
+  'Advanced matching & age verification badge',
+  'Message memory & chat sync',
   'Priority support',
 ];

@@ -91,7 +91,7 @@ export const LEGAL_DOCS = [
       {
         h: '1. Eligibility & Account Registration',
         p: [
-          `LinkUp is a global language learning, cultural exchange, and social community designed for adults. You must be at least ${LEGAL_META.minAge} years of age to create an account or use LinkUp. Certain features (such as the Connect / Dating section) require completed 18+ identity verification.`,
+          `LinkUp is a global language learning, cultural exchange, and social community designed for adults. You must be at least ${LEGAL_META.minAge} years of age to create an account or use LinkUp. Certain features (such as the Connect / Matchmaking section) require completed 18+ identity verification.`,
           'To maintain community integrity and prevent ban evasion, LinkUp enforces a strict One Device, One Account policy. You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account.',
         ],
       },

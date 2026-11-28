@@ -1,14 +1,14 @@
 export const FAQS = [
   {
     q: 'What is LinkUp?',
-    a: 'LinkUp is an all-in-one global social app for iOS and Android that brings together live voice rooms, interactive gift rooms, solo and group video live streaming, international and local dating, language exchange in 19 languages, Moments, and vertical Shorts.',
+    a: 'LinkUp is an all-in-one global social app for iOS and Android that brings together live voice rooms, interactive gift rooms, solo and group video live streaming, international and local matchmaking, language exchange in 19 languages, Moments, and vertical Shorts.',
   },
   {
     q: 'How do Voice Rooms and Gift Rooms work on LinkUp?',
     a: 'Every voice room features a 10-seat stage (2 Host/Co-Host seats and 8 Guest seats) across topics like Language Exchange, Music, Gaming, Debate, and Culture. Listeners can join the stage, turn on real-time AI live captions, send animated virtual gifts, drop Goodie Bags, and join Host Fanclubs.',
   },
   {
-    q: 'Can I use LinkUp for both international and local dating?',
+    q: 'Can I use LinkUp for both international and local matchmaking?',
     a: 'Yes. The Connect section lets 18+ Veriff-verified members discover matches nearby in their city or internationally worldwide. Profiles include native and learning languages, MBTI, zodiac, interests, and what you are looking for (Friendship, Casual, Long-term, or Marriage).',
   },
   {

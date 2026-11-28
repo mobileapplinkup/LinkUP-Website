@@ -61,7 +61,7 @@ export default function TokenStoreSection({ onOpenAuth }) {
         <SectionHeader
           eyebrow="Web token top-up"
           title={<>Get <span className="brand-text">+10% more tokens</span> on the web.</>}
-          subtitle="Sign in with your LinkUp account and top up globally via Stripe Checkout using debit cards, Apple Pay, Google Pay, or crypto. Tokens credit directly to your app wallet."
+          subtitle="Sign in with your LinkUp account and top up globally using Debit Cards, Apple Pay, Google Pay, WeChat, Alipay, or Crypto. Tokens credit directly to your app wallet."
         />
 
         {statusNotice && (
@@ -110,10 +110,14 @@ export default function TokenStoreSection({ onOpenAuth }) {
           )}
 
           {user ? (
-            <div className="flex items-center gap-2 rounded-2xl bg-linkup-surface-light px-4 py-2.5">
+            <a
+              href="#topup-packs"
+              className="flex items-center gap-2.5 rounded-2xl border border-linkup-gold/30 bg-linkup-surface-light px-4 py-2.5 transition hover:border-linkup-gold/60 hover:bg-white/10"
+            >
               <span className="text-xs text-linkup-muted">Your balance</span>
               <span className="font-display text-xl font-extrabold text-linkup-gold">🪙 {fmt(tokens)}</span>
-            </div>
+              <span className="rounded-lg bg-linkup-gold px-2 py-0.5 text-[11px] font-bold text-black">+ Top Up</span>
+            </a>
           ) : (
             <button onClick={onOpenAuth} className="btn-primary px-5 py-2.5 text-sm">
               <LogIn size={16} /> Sign In
@@ -128,7 +132,7 @@ export default function TokenStoreSection({ onOpenAuth }) {
         )}
 
         {/* 6 Web Token Packs (+10% bonus over in-app) */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div id="topup-packs" className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {WEB_TOKEN_PACKAGES.map((p) => {
             const extra = p.tokens - p.inAppTokens;
             const isBusy = busyId === p.id;
@@ -163,7 +167,7 @@ export default function TokenStoreSection({ onOpenAuth }) {
 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-linkup-muted">
           <span className="inline-flex items-center gap-1.5">
-            <CreditCard size={14} className="text-linkup-cyan" /> Debit Cards, Apple Pay, Google Pay &amp; Crypto via Stripe
+            <CreditCard size={14} className="text-linkup-cyan" /> Accepts Debit Cards, Apple Pay, Google Pay, WeChat, Alipay &amp; Crypto
           </span>
           <span className="inline-flex items-center gap-1.5">
             <ShieldCheck size={14} className="text-linkup-success" /> Instant sync to your LinkUp app wallet

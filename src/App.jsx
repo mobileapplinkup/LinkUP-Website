@@ -62,7 +62,7 @@ export default function App() {
         <AppPreviewSection />
         <SocialLinksSection />
         <TokenStoreSection onOpenAuth={openAuth} />
-        <PricingSection onDownload={openDownload} />
+        <PricingSection onDownload={openDownload} onOpenAuth={openAuth} />
         <FaqSection />
         <SafetySection onOpenDoc={openDoc} />
       </main>

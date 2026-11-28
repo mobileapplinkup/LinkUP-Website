@@ -1,6 +1,6 @@
 # LinkUp
 
-> LinkUp ("Talk. Stream. Meet. Belong.") is a global mobile social app for iOS and Android combining live voice rooms, interactive gift rooms, solo and group live video streaming, international and local 18+ dating, language learning & exchange in 19 languages with real-time AI translation and live captions, Moments & vertical Shorts, LINK relationships, and Host Fanclubs.
+> LinkUp ("Talk. Stream. Meet. Belong.") is a global mobile social app for iOS and Android combining live voice rooms, interactive gift rooms, solo and group live video streaming, international and local 18+ matchmaking, language learning & exchange in 19 languages with real-time AI translation and live captions, Moments & vertical Shorts, LINK relationships, and Host Fanclubs.
 
 - Website: https://linkupmobile.xyz
 - Support: support@linkupmobile.xyz
@@ -21,9 +21,9 @@
 - Go live with full-screen solo video streams or group live streams with guest video tiles.
 - Real-time chat, live gifting, viewer lists, and Host Fanclubs.
 
-### 3. International & Local Dating (Connect & Matchmaking)
+### 3. International & Local Matchmaking (Connect)
 - Meet language partners, friends, and romantic matches locally (Nearby / City) or internationally across cultures.
-- 18+ age-verified dating section powered by Veriff identity verification.
+- 18+ age-verified matchmaking section powered by Veriff identity verification.
 - Rich profiles featuring native and learning languages (1–5 fluency scale), MBTI, zodiac sign, blood type, occupation, hobbies, places visited, and relationship goals (Friendship, Casual, Long-term, Marriage).
 - Location and gender filters, Profile Boosts, and VIP-X advanced matchmaking.
 

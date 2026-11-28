@@ -46,9 +46,13 @@ export default function Navbar({ onDownload, onOpenAuth }) {
               <span className="max-w-[110px] truncate text-xs font-semibold text-white">
                 {profile?.name || user.displayName || user.email}
               </span>
-              <span className="rounded-lg bg-linkup-gold/15 px-2 py-0.5 text-xs font-bold text-linkup-gold">
-                🪙 {fmt(tokens)}
-              </span>
+              <a
+                href="#topup"
+                title="Click to top up tokens"
+                className="inline-flex items-center gap-1 rounded-lg bg-linkup-gold/15 px-2.5 py-0.5 text-xs font-bold text-linkup-gold transition hover:bg-linkup-gold/25"
+              >
+                🪙 {fmt(tokens)} <span className="text-[10px] font-extrabold">+</span>
+              </a>
               <button
                 onClick={signOut}
                 title="Sign out"
@@ -93,16 +97,28 @@ export default function Navbar({ onDownload, onOpenAuth }) {
           </ul>
           <div className="mt-3 flex flex-col gap-2">
             {user ? (
-              <button
-                onClick={() => {
-                  setOpen(false);
-                  signOut();
-                }}
-                className="btn-ghost w-full justify-between text-sm"
-              >
-                <span className="truncate">{profile?.name || user.email} · 🪙 {fmt(tokens)}</span>
-                <span className="inline-flex items-center gap-1 text-xs text-white/70"><LogOut size={14} /> Sign Out</span>
-              </button>
+              <div className="flex items-center gap-2">
+                <a
+                  href="#topup"
+                  onClick={() => setOpen(false)}
+                  className="btn-ghost flex-1 justify-between px-4 py-2.5 text-sm"
+                >
+                  <span className="truncate">{profile?.name || user.email}</span>
+                  <span className="rounded-lg bg-linkup-gold/15 px-2 py-0.5 text-xs font-bold text-linkup-gold">
+                    🪙 {fmt(tokens)} +
+                  </span>
+                </a>
+                <button
+                  onClick={() => {
+                    setOpen(false);
+                    signOut();
+                  }}
+                  aria-label="Sign out"
+                  className="btn-ghost px-3 py-2.5 text-sm"
+                >
+                  <LogOut size={16} />
+                </button>
+              </div>
             ) : (
               <button
                 onClick={() => {
